@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MaintenancePortal.Models.School>
+
+@{
+    ViewData["Title"] = "Schools List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>School Name</th>
+            <th>EMIS Number</th>
+            <th>Principal</th>
+            <th>District</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var school in Model)
+        {
+            <tr>
+                <td>@school.SchoolName</td>
+                <td>@school.EMISNumber</td>
+                <td>@school.PrincipalFirstName @school.PrincipalLastName</td>
+                <td>@school.DistrictName</td>
+            </tr>
+        }
+    </tbody>
+</table>

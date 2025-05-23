@@ -1,0 +1,47 @@
+﻿@model MaintenancePortal.Models.School
+
+@{
+    ViewData["Title"] = "Add New School";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="SchoolName"></label>
+        <input asp-for="SchoolName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EMISNumber"></label>
+        <input asp-for="EMISNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="SchoolAddress"></label>
+        <input asp-for="SchoolAddress" class="form-control" />
+    </div>
+
+    <h4>Principal Information</h4>
+    <div class="form-group">
+        <label asp-for="PrincipalFirstName"></label>
+        <input asp-for="PrincipalFirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="PrincipalLastName"></label>
+        <input asp-for="PrincipalLastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="PrincipalEmail"></label>
+        <input asp-for="PrincipalEmail" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="PrincipalPhoneNumber"></label>
+        <input asp-for="PrincipalPhoneNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DistrictName"></label>
+        <input asp-for="DistrictName" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save School</button>
+</form>
